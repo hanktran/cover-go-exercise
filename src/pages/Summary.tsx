@@ -35,7 +35,7 @@ const Summary: React.FC<SummaryProps> = () => {
         <h2 className="text-5xl text-center  text-gray-900 font-bold title-font mb-10">
           Summary
         </h2>
-        <ul className="w-48 font-medium text-gray-900 bg-white rounded-lg border border-gray-200 mb-8 mx-auto">
+        <ul className="w-60 font-medium text-gray-900 bg-white rounded-lg border border-gray-200 mb-8 mx-auto">
           {formattedInfo.map((field, index) => {
             return (
               <li

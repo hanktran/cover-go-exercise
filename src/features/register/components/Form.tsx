@@ -52,11 +52,16 @@ const Form: React.FC<FormProps> = ({
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="age"
-            type="number"
+            type="text"
             placeholder="Age"
             name="age"
             value={data?.age}
-            onChange={(e) => handleInputChange(e)}
+            onChange={(e) => {
+              const value = e.target.value;
+              const isNumber = /^\d+$/.test(e.target.value);
+              if (value && !isNumber) return;
+              handleInputChange(e);
+            }}
           />
         </div>
         <div className="mb-6">
